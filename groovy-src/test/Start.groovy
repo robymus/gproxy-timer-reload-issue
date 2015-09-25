@@ -36,7 +36,12 @@ class Start extends TimerTask {
 
     @Override
     void run() {
-        ticker.tick()
+        try {
+            ticker.tick()
+        } catch (Exception e) {
+            e.printStackTrace()
+            System.exit(1)
+        }
     }
 
 
